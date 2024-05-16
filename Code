@@ -15,9 +15,9 @@ public:
 	int birhd;
 
 	Student(string _name, string _fac, int _group, int _birhd) : name(_name), fac(_fac), group(_group), birhd(_birhd) {
-		if (_group > 0 || _birhd > 0) {
+		if (_group <= 0 || _birhd <= 0) {//изменил знаки на <=
 			cout << "Error" << endl;
-			exit(1);
+			exit(1);//комментарий
 		}
 	}
 
@@ -33,15 +33,11 @@ public:
 
 };
 
-void Zad3();
-
-void Zad2();
+//Удалил лишние функции
 
 int main()
 {
-	Zad2();
-
-	Zad3();
+	//Удалил лишние функции
 
 	vector<Student> x;
 
