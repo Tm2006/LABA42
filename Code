@@ -1,0 +1,76 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <sstream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+class Student {
+public:
+	string name;
+	string fac;
+	int group;
+	int birhd;
+
+	Student(string _name, string _fac, int _group, int _birhd) : name(_name), fac(_fac), group(_group), birhd(_birhd) {
+		if (_group > 0 || _birhd > 0) {
+			cout << "Error" << endl;
+			exit(1);
+		}
+	}
+
+	int Age(){
+		return 2024 - birhd;
+	}
+	
+	friend ostream& operator << (ostream& s, Student& stud) {
+		s << "name : " << stud.name << "|fac : " << stud.fac << "|group : " << stud.group << "|age : " << stud.Age();
+		return s;
+	}
+
+
+};
+
+void Zad3();
+
+void Zad2();
+
+int main()
+{
+	Zad2();
+
+	Zad3();
+
+	vector<Student> x;
+
+	x.push_back(Student("F", "ICIT", 5, 2006));
+	x.push_back(Student("F", "ICIT", 5, 2006));
+	x.push_back(Student("A", "IT", 6, 2004));
+	x.push_back(Student("G", "IT", 2, 2008));
+
+	int g;
+	string f = "IT";
+
+	cout << "Fac : ";
+	cin >> f;
+
+	for (auto& i : x) {
+		if (i.fac == f) {
+			cout << i << endl;
+		}
+	}
+
+	cout << "Group : ";
+	cin >> g;
+
+	for (auto& i : x) {
+		if (i.group == g) {
+			cout << i << endl;
+		}
+	}
+	
+}
+
+
