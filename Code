@@ -41,10 +41,12 @@ int main()
 
 	vector<Student> x;
 
-	x.push_back(Student("F", "ICIT", 5, 2006));
-	x.push_back(Student("F", "ICIT", 5, 2006));
-	x.push_back(Student("A", "IT", 6, 2004));
-	x.push_back(Student("G", "IT", 2, 2008));
+	x.push_back(Student("Tima", "ICIT", 5, 2006));
+	x.push_back(Student("Danik", "ICIT", 5, 2006));
+	x.push_back(Student("Leli", "IT", 6, 2004));
+	x.push_back(Student("PAvel", "IT", 2, 2008));
+        x.push_back(Student("Magnus", "MP", 4, 2005));
+        x.push_back(Student("Polina", "MP", 4, 2007));//Добавил новые данные в массив и изменил старые
 
 	int g;
 	string f = "IT";
